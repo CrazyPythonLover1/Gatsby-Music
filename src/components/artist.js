@@ -1,13 +1,25 @@
 import React from 'react';
 
-const Artist = ({band}) => {
+export default class Artist extends React.Component{
+    constructor(props) {
+        super(props);
+        this.state = {
+            count:0,
+            title: ""
+        }
+    }
 
-    return (
-        <div>
-            <h1> Origin:  {band.Origin} </h1>
-        </div>
-    )
+    handleClick() {
+        this.setState({count: this.state.count+1,title: "counter"})
+    }
+    render() {
+        return(
+            <div>
+                <h1> Origin:  {this.props.band.Origin} </h1>
+                <button onClick={()=>this.handleClick()}> Click Me </button>
+                <h3> {this.state.title} {this.state.count} </h3>
+            </div>
+        )
+    }
 }
-
-export default Artist;
 
