@@ -1,15 +1,16 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
+import data from "../data/artist.json"
+import Artist from "../components/artist"
 
-const IndexPage = () => (
+const IndexPage = ({data}) => (
   <Layout>
     <SEO title="Home" />
-    <h1>  Music </h1>
-    <p>Welcome to your new Gatsby site.</p>
+    <Artist band={data.allDataJson.edges[0].node.Bayside} />
     <p>Now go build something great.</p>
     <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
       <Image />
@@ -20,3 +21,19 @@ const IndexPage = () => (
 )
 
 export default IndexPage
+
+export const pageQuery = graphql`
+  {
+    allDataJson {
+      edges {
+        node {
+          Bayside {
+            Origin 
+            Genre
+            Biography
+          }
+        }
+      }
+    }
+  }
+`
