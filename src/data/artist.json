@@ -1,0 +1,17 @@
+{
+    "Bayside": {
+        "origin": "Queens, New York, USA",
+        "Genre": "Alternative",
+        "Biography": "Coming soon"
+    },
+    "Migos": {
+        "origin": "Atlanta, USA",
+        "Genre": "Rap",
+        "Biography": "Coming soon"
+    },
+    "Outkast": {
+        "origin":"Atlanta, USA",
+        "Genre": "Rap",
+        "Biography": "Coming soon"
+    }
+}
