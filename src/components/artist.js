@@ -15,6 +15,7 @@ export default class Artist extends React.Component{
     render() {
         return(
             <div>
+                <h1> Hello develop </h1>
                 <h1> Origin:  {this.props.band.Origin} </h1>
                 <button onClick={()=>this.handleClick()}> Click Me </button>
                 <h3> {this.state.title} {this.state.count} </h3>
